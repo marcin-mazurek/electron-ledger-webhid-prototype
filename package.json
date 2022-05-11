@@ -1,0 +1,25 @@
+{
+  "name": "electron-web-hid-prototype",
+  "version": "1.0.0",
+  "description": "An example Electron app which uses Ledger WebHID transport on the renderer process",
+  "scripts": {
+    "build": "rm -rf dist/ && parcel build --public-url ./ src/index.html src/renderer.js && cp src/index.js dist/",
+    "start": "yarn build && electron dist/index.js"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Marcin Mazurek",
+    "email": "marcin.mazurek@iohk.io"
+  },
+  "devDependencies": {
+    "electron": "18.2.0",
+    "parcel": "^2.5.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@cardano-foundation/ledgerjs-hw-app-cardano": "^5.0.0",
+    "@ledgerhq/hw-transport-webhid": "^6.27.1",
+    "@ledgerhq/logs": "^6.10.0",
+    "buffer": "^6.0.3"
+  }
+}
